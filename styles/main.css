@@ -52,6 +52,37 @@ header img {
 .shadow {
 	text-shadow: 2px 2px 2px #800000;
 }
+
+/* Navigation Styles */
+#nav_menu {
+    background-color: #800000;
+    border: 3px solid #800000;
+}
+
+#nav_menu ul {
+    list-style-type:none ;
+    display: flex;
+}
+
+#nav_menu li {
+    width: 16.66%;
+}
+
+#nav_menu a {
+    display: block;
+    text-align: center;
+    padding: .7em 0;
+    text-decoration: none;
+    color: white;
+    font-size: 110%;
+    font-weight: bold;
+    transition: ease-in-out 300ms;
+}
+
+#nav_menu a:hover {
+    color: yellow;
+}
+
 main {
 	display: flex;
 	flex-direction: row-reverse;
