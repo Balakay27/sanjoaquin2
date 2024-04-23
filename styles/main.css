@@ -3,6 +3,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	max-width: 1200px;
 }
 .clearfix::after {
 	content: "";
@@ -39,7 +40,7 @@ header {
 	align-items: center;
 }
 header h2 {
-	font-size: 175%;
+	font-size: 200%;
 	color: #800000;
 }
 header h3 {
@@ -52,40 +53,32 @@ header img {
 .shadow {
 	text-shadow: 2px 2px 2px #800000;
 }
-
-/* Navigation Styles */
-#nav_menu {
-    background-color: #800000;
-    border: 3px solid #800000;
-}
-
-#nav_menu ul {
-    list-style-type:none ;
-    display: flex;
-}
-
-#nav_menu li {
-    width: 16.66%;
-}
-
-#nav_menu a {
-    display: block;
-    text-align: center;
-    padding: .7em 0;
-    text-decoration: none;
-    color: white;
-    font-size: 110%;
-    font-weight: bold;
-    transition: ease-in-out 300ms;
-}
-
-#nav_menu a:hover {
-    color: yellow;
-}
-
 main {
 	display: flex;
 	flex-direction: row-reverse;
+}
+#nav_menu{
+	border-bottom: 3px solid #800000;
+	background-color: #800000;
+}
+#nav_menu ul{
+	list-style-type: none;
+	display: flex;
+}
+#nav_menu li{
+	width: 20%;
+}
+#nav_menu a{
+	text-align: center;
+	display: block;
+	padding: .7em 0;
+	background-color: #800000;
+	font-weight: bold;
+	text-decoration: none;
+	color: white;
+}
+#nav_menu a:hover{
+	color: yellow;
 }
 /* the styles for the section */
 section {
@@ -162,4 +155,54 @@ footer p {
 	text-align: center;
 	color: white;
 	padding: 1em 0;
+}
+
+#mobilemenu{
+	display: none;
+}
+
+.slicknav_menu{
+	background-color: #800000;
+}
+
+@media (max-width: 900px) {
+	body{
+		box-shadow: none;
+		font-size: 90%;
+	}
+	
+}
+
+@media (max-width: 767px){
+	main{
+		flex-direction: column;
+		align-items: center;
+
+	}
+	section{
+		width: 95%;
+	}
+	aside{
+		width: 95%;
+	}
+	#mobilemenu{
+		display: block;
+	}
+	#nav_menu{
+		display: none;
+	}
+}
+
+@media (max-width: 479px) {
+	#mobilemenu{
+		display: block;
+	}
+
+	header h1 h2 h3{
+		font-size: 90%;
+	}
+	section p{
+		font-size: 90%;
+	}
+	
 }
